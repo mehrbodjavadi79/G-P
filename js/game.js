@@ -1,7 +1,11 @@
+/*
+Bactria data model.
+*/
 class Bactria {
-    gens = []
-    enzymes = []
-    materials = []
+    
+    gens = [];
+    enzymes = [];
+    materials = [];
     
     getMassOfMaterial(material) {
         var res = 0;
@@ -39,6 +43,9 @@ class Bactria {
         }
     }
 
+    /*
+    Merging repeated items into one item.
+    */
     refresh() {
         for(var i = 0; i < this.enzymes.length; i++) {
             for(var  j = i + 1; j < this.enzymes.length; j++) {
@@ -63,11 +70,15 @@ class Bactria {
     }
 }
 
+
 class Rule {
     enzymes = [];
     materials = [];
     new_materials = [];
 
+    /*
+    Returning the maximum amount of target_materials can supply.
+    */
     canSupply(bactria) {
         bactria.refresh();
         var minMaterial = Infinity;
@@ -85,6 +96,9 @@ class Rule {
         return Math.min(minEnzymes, minMaterial);
     }
 
+    /*
+    Do the job!
+    */
     supply(bactria) {
         bactria.refresh();
         const output = this.canSupply(bactria);
@@ -101,8 +115,6 @@ class Rule {
             bactria.materials.push(new Material(material.name, output));
         });
     }
-
-
 
 }
 
@@ -170,5 +182,6 @@ class Enzyme {
 
 
 class GameState {
-    
 }
+
+
