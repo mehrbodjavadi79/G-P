@@ -1,0 +1,25 @@
+
+body {
+    background-color: #b3b3b3;
+    font-size: 1.5rem;
+    text-align: center;
+    font-family: Cochin;
+    color: #111999;
+    border: solid 3px gray;
+}
+
+button {
+    background-color: #777444;
+    height: 100px;
+    width: 1000px;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    font-size: 4rem;
+    color: #111999;
+    box-shadow: 0 4px 10px black;
+    border: none;
+}
+
+button:hover {
+    background-color: rgb(134, 131, 80);
+}
