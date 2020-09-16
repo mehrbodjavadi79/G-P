@@ -1,0 +1,62 @@
+body {
+  margin: 0;
+  background-color: #ecf0f1;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+* {
+  box-sizing: border-box;
+}
+
+.oopsie {
+  background: #787878;
+  width: 5rem;
+  height: 5rem;
+}
+
+.tableContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -5;
+}
+
+.tables {
+  margin: auto;
+  border-spacing: 0;
+  background: rgba(0, 0, 0, 0.07);
+  padding: 0.5rem;
+  border-radius: 0.6rem;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.tables td {
+  width: 4rem;
+  height: 4rem;
+  margin: 0.1rem;
+  display: inline-block;
+  position: relative;
+  border-radius: 5px;
+  background: #eaeaea;
+  --bc: rgba(0, 0, 0, 0.16);
+  --border: solid var(--bc) 0.15rem;
+  border-bottom: var(--border);
+  border-left: var(--border);
+}
+
+.tables td.water {
+  background: #4bcffa;
+}
+
+.tables td.lava {
+  background: #e74c3c;
+}
+
+.tables td.sand {
+  background: #ffc29b;
+}
+
+.tables td.dirt {
+  background: #9e6c4b;
+}
